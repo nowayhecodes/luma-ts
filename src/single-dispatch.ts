@@ -17,10 +17,8 @@ const REGISTRY = Symbol("registry");
  * The decorated method becomes the default handler for unregistered types, and gains a `register`
  * method that can be used to register handlers for specific types.
  *
- * @param target - The target object (prototype)
- * @param propertyKey - The name of the decorated method
- * @param descriptor - The property descriptor of the decorated method
- * @returns A modified property descriptor that includes the dispatch logic
+ * @returns The `register` method that can be used to register handlers for specific types, providing the ability to
+ * add method overloads for different types.
  *
  * @example
  * class Example {
