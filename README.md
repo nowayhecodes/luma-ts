@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="./docs/assets/luma-black.png" alt="luma" width="80" />
+  <img src="./assets/luma-black.png" alt="luma" width="80" />
 </div>
 
 
