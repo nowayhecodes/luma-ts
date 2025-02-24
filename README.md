@@ -10,4 +10,5 @@
 
 ### Documentation
 
-- [docs](docs/README.md)
+Generated documentation for each module:
+
