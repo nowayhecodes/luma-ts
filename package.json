@@ -1,0 +1,63 @@
+{
+  "name": "luma-ts",
+  "version": "1.0.0",
+  "author": "Gus Cavalcante <nowayhecodes@gmail.com>",
+  "license": "MIT",
+  "description": "Luma (from illuminate) is a utility library for simplifying common tasks and providing some sugar to common patterns.",
+  "keywords": [
+    "utility",
+    "helper",
+    "typescript",
+    "esm",
+    "commonjs",
+    "sugar"
+  ],
+  "type": "module",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js",
+      "types": "./lib/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "dev": "tsx watch src/index.ts",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "clean": "rm -rf lib",
+    "docs:generate": "typedoc --plugin typedoc-plugin-markdown",
+    "docs:update": "node scripts/update-readme.js",
+    "docs": "npm run docs:generate && npm run docs:update",
+    "version": "npm run docs && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md docs README.md",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.0.0",
+    "@commitlint/config-conventional": "19.0.0",
+    "@types/node": "22.13.5",
+    "commitizen": "4.3.0",
+    "conventional-changelog-cli": "4.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "9.1.7",
+    "tsx": "4.19.3",
+    "typedoc": "0.25.0",
+    "typedoc-plugin-markdown": "3.17.0",
+    "typescript": "5.7.3",
+    "vitest": "3.0.6"
+  },
+  "dependencies": {
+    "reflect-metadata": "0.2.2",
+    "ts-match": "1.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

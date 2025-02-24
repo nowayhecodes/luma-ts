@@ -1,0 +1,16 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/**/*.ts"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none",
+  "cleanOutputDir": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "sort": ["source-order"],
+  "groupOrder": ["Decorators", "Types", "*"]
+} 
